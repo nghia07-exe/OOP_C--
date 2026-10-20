@@ -1,25 +1,44 @@
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C++: Run active exercise",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\build\\program.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "preLaunchTask": "C++: Build active exercise",
+      "setupCommands": [
         {
-            "name": "C++: Run active exercise",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}\\build\\program.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "gdb",
-            "preLaunchTask": "C++: Build active exercise",
-            "setupCommands": [
-                {
-                    "description": "Enable GDB pretty printing",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
+          "description": "Enable GDB pretty printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         }
-    ]
+      ]
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/Admin/NGHIACAO/IMPORTANT/HCMUS/OOP_C++/T3_4/Ex3_1-3_2",
+      "program": "c:/Users/Admin/NGHIACAO/IMPORTANT/HCMUS/OOP_C++/T3_4/Ex3_1-3_2/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
 }
