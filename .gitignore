@@ -1,0 +1,17 @@
+# Build outputs
+**/build/
+**/*.exe
+**/*.o
+**/*.obj
+**/*.out
+
+# Local bootstrap environment
+.tools/
+.venv/
+
+# VS Code local overrides
+.vscode/*.local.json
+
+# Python cache
+__pycache__/
+*.py[cod]
