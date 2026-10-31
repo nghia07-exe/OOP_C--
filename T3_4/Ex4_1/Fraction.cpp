@@ -70,7 +70,6 @@ bool Fraction::operator<=(const Fraction& frac) {
 // không, bộ nhớ (OOP)
 // // vd: f1 = f2 + f3 <- "f_temp = f2 + f3" (operator)
 
-// --- Toán tử gán ---
 Fraction& Fraction::operator=(const Fraction& frac) {
     num_ = frac.num_;
     denom_ = frac.denom_;
@@ -100,7 +99,6 @@ Fraction* f = new Fraction[10];
 // // TO DO: trả lời câu hỏi xong thì tiếp tục thiết kế *=, += (Note thêm
 // bên dưới)
 
-// --- Toán tử tăng / giảm tiền tố & hậu tố ---
 Fraction& Fraction::operator++() {
     num_ += denom_;
     return *this;
@@ -126,12 +124,10 @@ Fraction Fraction::operator--(int) {
 // // ^ : Q: tại sao có Fraction& với pre-i và Fraction với post-i (++)
 // // TO DO: operator-- : similar to the previous operator
 
-// --- Ép kiểu ---
 Fraction::operator int() const { return num_ / denom_; }
 
 Fraction::operator float() const { return 1.0 * num_ / denom_; }
 
-// --- Toán tử nhập / xuất Stream ---
 std::ostream& operator<<(std::ostream& os, const Fraction& frac) {
     os << frac.num_ << "/" << frac.denom_;
     return os;
